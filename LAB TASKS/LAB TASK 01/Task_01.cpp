@@ -33,8 +33,8 @@ public:
     Complex operator*(Complex obj1)
     {
         Complex temp;
-        temp.img = (real * obj1.img) - (img * obj1.real);
         temp.real = (real * obj1.real) - (img * obj1.img);
+        temp.img = (real * obj1.img) + (img * obj1.real);
         return temp;
     }
     void show()
